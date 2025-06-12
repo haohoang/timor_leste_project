@@ -1,0 +1,9 @@
+
+SELECT
+    ACCOUNT_TYPE_ID,
+  NAME,
+  LOCALE_KEY
+FROM
+    ACCOUNT_TYPE
+
+        

@@ -1,0 +1,18 @@
+# L0
+/raw_zone/fintech/level0
+
+# L1
+/work_zone/fintech/level1
+
+# Report
+/gold_zone/fintech
+
+
+# Hive
+## URL
+${THRIFT_URL_2}
+## Class
+org.apache.hive.jdbc.HiveDriver
+## User
+${THRIFT_USER_2}
+## Password

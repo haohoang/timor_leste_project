@@ -1,0 +1,15 @@
+select account_right_id,
+       account_id,
+       account_state_id,
+       process_code,
+       transaction_type_id,
+       account_type_id,
+       created_by,
+       modified_by,
+       created_time,
+       last_modified,
+       status,
+       effect_type,
+       partner_code,
+       service_code
+  from account_right

@@ -1,0 +1,15 @@
+SELECT
+    "PIORITY",
+    "ACCOUNT_ID",
+    "CREATED_BY",
+    "VERSION",
+    "STATUS",
+    "TARIFF_PLAN_ID",
+    "VALID_TO",
+    "VALID_FROM",
+    "CREATED_DATE",
+    "MODIFIED_DATE",
+    "MODIFIED_BY",
+    "PLAN_NAME"
+FROM
+    "TARIFF_PLAN_SPECIFIC"
