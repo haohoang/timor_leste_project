@@ -3,4 +3,9 @@ __pycache__/
 .conda
 docs
 jars
+anhttn22 
+tien
+slides
+sql_scripts
+*.ipynb_checkpoints
 .

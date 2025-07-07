@@ -1,0 +1,149 @@
+-rwxr-xr-x   3 vdl_app vdl_app      92349 2025-07-05 05:05 /work_zone/fintech/level1/f_bnvtl_mt_his/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app      89146 2025-07-05 05:05 /work_zone/fintech/level1/f_bnvtl_mt_his/partition=20250704/part-00001
+Found 4 items
+-rwxr-xr-x   3 vdl_app vdl_app   20402894 2025-07-05 05:06 /work_zone/fintech/level1/f_ewallet_account/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app   20353545 2025-07-05 05:06 /work_zone/fintech/level1/f_ewallet_account/partition=20250704/part-00001
+-rwxr-xr-x   3 vdl_app vdl_app   20417271 2025-07-05 05:06 /work_zone/fintech/level1/f_ewallet_account/partition=20250704/part-00002
+-rwxr-xr-x   3 vdl_app vdl_app   15024309 2025-07-05 05:06 /work_zone/fintech/level1/f_ewallet_account/partition=20250704/part-00003
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app      25506 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_account_right/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app      25664 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_account_right/partition=20250704/part-00001
+Found 3 items
+-rwxr-xr-x   3 vdl_app vdl_app   12137974 2025-07-05 05:08 /work_zone/fintech/level1/f_ewallet_account_status_view/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app   12259952 2025-07-05 05:08 /work_zone/fintech/level1/f_ewallet_account_status_view/partition=20250704/part-00001
+-rwxr-xr-x   3 vdl_app vdl_app    1655826 2025-07-05 05:08 /work_zone/fintech/level1/f_ewallet_account_status_view/partition=20250704/part-00002
+Found 3 items
+-rwxr-xr-x   3 vdl_app vdl_app   40595751 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_action_log/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app   34407844 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_action_log/partition=20250704/part-00001
+-rwxr-xr-x   3 vdl_app vdl_app   37593360 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_action_log/partition=20250704/part-00002
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app     368401 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_agent/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app     368407 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_agent/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app     120290 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_agent_location/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app     129557 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_agent_location/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app       1723 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_blacklist/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app       1741 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_blacklist/partition=20250704/part-00001
+Found 1 items
+-rwxr-xr-x   3 vdl_app vdl_app        366 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_blacklist_bonus_deposit/partition=20250704/part-00000
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app      22544 2025-07-05 05:03 /work_zone/fintech/level1/f_ewallet_bonus_data_log/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app      22424 2025-07-05 05:03 /work_zone/fintech/level1/f_ewallet_bonus_data_log/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app      30698 2025-07-05 05:02 /work_zone/fintech/level1/f_ewallet_change_state_action/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app      30587 2025-07-05 05:02 /work_zone/fintech/level1/f_ewallet_change_state_action/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app    3006925 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_customer_register_temp/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app    2974688 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_customer_register_temp/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app      13690 2025-07-05 05:02 /work_zone/fintech/level1/f_ewallet_enquiry_action/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app      13750 2025-07-05 05:02 /work_zone/fintech/level1/f_ewallet_enquiry_action/partition=20250704/part-00001
+Found 4 items
+-rwxr-xr-x   3 vdl_app vdl_app    5547032 2025-07-05 05:04 /work_zone/fintech/level1/f_ewallet_log_account_audit/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app    5547556 2025-07-05 05:04 /work_zone/fintech/level1/f_ewallet_log_account_audit/partition=20250704/part-00001
+-rwxr-xr-x   3 vdl_app vdl_app    5538494 2025-07-05 05:04 /work_zone/fintech/level1/f_ewallet_log_account_audit/partition=20250704/part-00002
+-rwxr-xr-x   3 vdl_app vdl_app    4099574 2025-07-05 05:04 /work_zone/fintech/level1/f_ewallet_log_account_audit/partition=20250704/part-00003
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app     722401 2025-07-05 05:04 /work_zone/fintech/level1/f_ewallet_log_agent_transaction_detail/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app     741820 2025-07-05 05:04 /work_zone/fintech/level1/f_ewallet_log_agent_transaction_detail/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app      24406 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_log_bonus_deposit/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app      24440 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_log_bonus_deposit/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app    3144589 2025-07-05 05:03 /work_zone/fintech/level1/f_ewallet_log_buy_package/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app    2972029 2025-07-05 05:03 /work_zone/fintech/level1/f_ewallet_log_buy_package/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app       3372 2025-07-05 05:03 /work_zone/fintech/level1/f_ewallet_log_emoney_flow_by_trans_type/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app       3047 2025-07-05 05:03 /work_zone/fintech/level1/f_ewallet_log_emoney_flow_by_trans_type/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app      27278 2025-07-05 05:03 /work_zone/fintech/level1/f_ewallet_log_finish_transfer/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app      27817 2025-07-05 05:03 /work_zone/fintech/level1/f_ewallet_log_finish_transfer/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app       3323 2025-07-05 05:04 /work_zone/fintech/level1/f_ewallet_log_master_account_audit/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app       2732 2025-07-05 05:04 /work_zone/fintech/level1/f_ewallet_log_master_account_audit/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app       4937 2025-07-05 05:03 /work_zone/fintech/level1/f_ewallet_log_money_gram/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app       3706 2025-07-05 05:03 /work_zone/fintech/level1/f_ewallet_log_money_gram/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app     164346 2025-07-05 05:03 /work_zone/fintech/level1/f_ewallet_log_trans_commission/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app     157152 2025-07-05 05:04 /work_zone/fintech/level1/f_ewallet_log_trans_commission/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app     328779 2025-07-05 05:04 /work_zone/fintech/level1/f_ewallet_log_trans_revenue/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app     319431 2025-07-05 05:04 /work_zone/fintech/level1/f_ewallet_log_trans_revenue/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app     246517 2025-07-05 05:04 /work_zone/fintech/level1/f_ewallet_log_trans_summary_by_range/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app     246051 2025-07-05 05:04 /work_zone/fintech/level1/f_ewallet_log_trans_summary_by_range/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app    1754242 2025-07-05 05:08 /work_zone/fintech/level1/f_ewallet_mssi_cus_infor/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app    1857670 2025-07-05 05:08 /work_zone/fintech/level1/f_ewallet_mssi_cus_infor/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app    4104768 2025-07-05 05:08 /work_zone/fintech/level1/f_ewallet_mssi_cus_infor_payment/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app    4505363 2025-07-05 05:08 /work_zone/fintech/level1/f_ewallet_mssi_cus_infor_payment/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app       4127 2025-07-05 05:05 /work_zone/fintech/level1/f_ewallet_mt_his/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app       3000 2025-07-05 05:05 /work_zone/fintech/level1/f_ewallet_mt_his/partition=20250704/part-00001
+Found 4 items
+-rwxr-xr-x   3 vdl_app vdl_app    8467863 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_party/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app    8057781 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_party/partition=20250704/part-00001
+-rwxr-xr-x   3 vdl_app vdl_app    7470441 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_party/partition=20250704/part-00002
+-rwxr-xr-x   3 vdl_app vdl_app    5253423 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_party/partition=20250704/part-00003
+Found 4 items
+-rwxr-xr-x   3 vdl_app vdl_app   12683383 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_party_role/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app   12640276 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_party_role/partition=20250704/part-00001
+-rwxr-xr-x   3 vdl_app vdl_app   12693474 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_party_role/partition=20250704/part-00002
+-rwxr-xr-x   3 vdl_app vdl_app    9438958 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_party_role/partition=20250704/part-00003
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app       2416 2025-07-05 05:08 /work_zone/fintech/level1/f_ewallet_plan_business_report/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app       2352 2025-07-05 05:08 /work_zone/fintech/level1/f_ewallet_plan_business_report/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app      10431 2025-07-05 05:04 /work_zone/fintech/level1/f_ewallet_reconcile_report_lotto/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app      10526 2025-07-05 05:04 /work_zone/fintech/level1/f_ewallet_reconcile_report_lotto/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app      22488 2025-07-05 05:05 /work_zone/fintech/level1/f_ewallet_register_action/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app      23108 2025-07-05 05:05 /work_zone/fintech/level1/f_ewallet_register_action/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app      71527 2025-07-05 05:05 /work_zone/fintech/level1/f_ewallet_request_pos/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app      72205 2025-07-05 05:05 /work_zone/fintech/level1/f_ewallet_request_pos/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app      15544 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_tariff_plan_specific/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app      19802 2025-07-05 05:07 /work_zone/fintech/level1/f_ewallet_tariff_plan_specific/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app    1792383 2025-07-05 05:05 /work_zone/fintech/level1/f_ewallet_trans_accounting/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app    1737998 2025-07-05 05:05 /work_zone/fintech/level1/f_ewallet_trans_accounting/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app      69082 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_trans_cash/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app      68757 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_trans_cash/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app       8368 2025-07-05 05:01 /work_zone/fintech/level1/f_ewallet_trans_finance/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app       8221 2025-07-05 05:01 /work_zone/fintech/level1/f_ewallet_trans_finance/partition=20250704/part-00001
+Found 14 items
+-rwxr-xr-x   3 vdl_app vdl_app    6154135 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_trans_log/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app    6571461 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_trans_log/partition=20250704/part-00001
+-rwxr-xr-x   3 vdl_app vdl_app    6541434 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_trans_log/partition=20250704/part-00002
+-rwxr-xr-x   3 vdl_app vdl_app    6533885 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_trans_log/partition=20250704/part-00003
+-rwxr-xr-x   3 vdl_app vdl_app    6471506 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_trans_log/partition=20250704/part-00004
+-rwxr-xr-x   3 vdl_app vdl_app    6505611 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_trans_log/partition=20250704/part-00005
+-rwxr-xr-x   3 vdl_app vdl_app    6486671 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_trans_log/partition=20250704/part-00006
+-rwxr-xr-x   3 vdl_app vdl_app    6445812 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_trans_log/partition=20250704/part-00007
+-rwxr-xr-x   3 vdl_app vdl_app    6455305 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_trans_log/partition=20250704/part-00008
+-rwxr-xr-x   3 vdl_app vdl_app    6397405 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_trans_log/partition=20250704/part-00009
+-rwxr-xr-x   3 vdl_app vdl_app    6285435 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_trans_log/partition=20250704/part-00010
+-rwxr-xr-x   3 vdl_app vdl_app    6236348 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_trans_log/partition=20250704/part-00011
+-rwxr-xr-x   3 vdl_app vdl_app    6044506 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_trans_log/partition=20250704/part-00012
+-rwxr-xr-x   3 vdl_app vdl_app    5359180 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_trans_log/partition=20250704/part-00013
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app     335205 2025-07-05 05:02 /work_zone/fintech/level1/f_ewallet_trans_merchant/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app     351722 2025-07-05 05:02 /work_zone/fintech/level1/f_ewallet_trans_merchant/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app    2345575 2025-07-05 05:05 /work_zone/fintech/level1/f_ewallet_trans_step/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app    2411497 2025-07-05 05:05 /work_zone/fintech/level1/f_ewallet_trans_step/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app    2024373 2025-07-05 05:05 /work_zone/fintech/level1/f_ewallet_trans_vpg/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app    1890409 2025-07-05 05:05 /work_zone/fintech/level1/f_ewallet_trans_vpg/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app    2338460 2025-07-05 05:04 /work_zone/fintech/level1/f_ewallet_transaction/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app    2354156 2025-07-05 05:04 /work_zone/fintech/level1/f_ewallet_transaction/partition=20250704/part-00001
+Found 2 items
+-rwxr-xr-x   3 vdl_app vdl_app     261568 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_transaction_fact_daily/partition=20250704/part-00000
+-rwxr-xr-x   3 vdl_app vdl_app     210504 2025-07-05 05:00 /work_zone/fintech/level1/f_ewallet_transaction_fact_daily/partition=20250704/part-00001

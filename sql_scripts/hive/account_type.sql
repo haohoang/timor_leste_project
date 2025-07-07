@@ -17,7 +17,10 @@ create external table if not exists rd_ewallet_account_type (
     DOWNLOAD_TIME string
 )
 ROW FORMAT DELIMITED FIELDS TERMINATED BY '|'
-LOCATION '${HDFS_DIR_RAW_ZONE_FINTECH}/vtl_ewallet_account_type/${YYYYMMDD}' 
+LOCATION '${HDFS_DIR_RAW_ZONE_FINTECH}/vtl_ewallet_account_type/${YYYYMMDD}'
+TBLPROPERTIES (
+    'EXTERNAL'='FALSE'
+) 
 ;
     
 
@@ -37,9 +40,9 @@ TBLPROPERTIES (
 
 INSERT OVERWRITE TABLE f_ewallet_account_type PARTITION (partition)            
 SELECT 
-    ACCOUNT_TYPE_ID,
-  NAME,
-  LOCALE_KEY,
-    from_unixtime(cast(SUM_DATE/1000 as bigint),'yyyyMMdd') partition
+    NULLIF(ACCOUNT_TYPE_ID, '') as ACCOUNT_TYPE_ID,
+  NULLIF(NAME, '') as NAME,
+  NULLIF(LOCALE_KEY, '') as LOCALE_KEY,
+    '${YYYYMMDD:DD-1}' AS partition
 FROM rd_ewallet_account_type;
     

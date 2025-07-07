@@ -1,15 +1,22 @@
-select account_right_id,
-       account_id,
-       account_state_id,
-       process_code,
-       transaction_type_id,
-       account_type_id,
-       created_by,
-       modified_by,
-       created_time,
-       last_modified,
-       status,
-       effect_type,
-       partner_code,
-       service_code
-  from account_right
+
+SELECT
+    ACCOUNT_RIGHT_ID,
+  ACCOUNT_ID,
+  ACCOUNT_STATE_ID,
+  PROCESS_CODE,
+  TRANSACTION_TYPE_ID,
+  ACCOUNT_TYPE_ID,
+  CREATED_BY,
+  MODIFIED_BY,
+  CREATED_TIME,
+  LAST_MODIFIED,
+  STATUS,
+  EFFECT_TYPE,
+  PARTNER_CODE,
+  SERVICE_CODE
+FROM
+    account_right
+WHERE
+    ACCOUNT_RIGHT_ID >= TRUNC(SYSDATE - 1)
+            AND ACCOUNT_RIGHT_ID < TRUNC(SYSDATE)
+        

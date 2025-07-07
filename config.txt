@@ -16,3 +16,9 @@ org.apache.hive.jdbc.HiveDriver
 ## User
 ${THRIFT_USER_2}
 ## Password
+
+spring.datasource.url=jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.226.45.41)(PORT=1521))(CONNECT_DATA=(FAILOVER_MODE=(TYPE=select)(METHOD=basic)(RETRIES=180)(DELAY=5))(SERVICE_NAME=bill)))
+	spring.datasource.username=cm_pos
+	spring.datasource.password=txrs65fghDGREg645
+
+    oracle.jdbc.driver.OracleDriver

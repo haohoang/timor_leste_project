@@ -104,7 +104,10 @@ create external table if not exists rd_ewallet_{table_name} (
     DOWNLOAD_TIME string
 )
 ROW FORMAT DELIMITED FIELDS TERMINATED BY '|'
-LOCATION '${{HDFS_DIR_RAW_ZONE_FINTECH}}/vtl_ewallet_{table_name}/${{YYYYMMDD}}' 
+LOCATION '${{HDFS_DIR_RAW_ZONE_FINTECH}}/vtl_ewallet_{table_name}/${{YYYYMMDD}}'
+TBLPROPERTIES (
+    'EXTERNAL'='FALSE'
+) 
 ;
     """
 
@@ -146,7 +149,7 @@ FROM rd_ewallet_{table_name};
                 f"from_unixtime(cast({col[0]}/1000 as bigint),'yyyy-MM-dd HH:mm:ss') as {col[0]}"
             )
         else:
-            insert_columns.append(f"{col[0]}")
+            insert_columns.append(f"NULLIF({col[0]}, '') as {col[0]}")
     insert_statement = insert_template.format(
         table_name=table_name.lower(),
         columns=",\n  ".join(insert_columns)
@@ -252,11 +255,18 @@ if __name__ == "__main__":
     # driver_path = os.getenv("ORACLE_DRIVER_PATH")
     
     # table_name_list = ["ACCOUNT_RIGHT"]
-    file_path = """D:\Documents\Timor Leste Project\sql_scripts\oracle\ddl\\"""
-    table_name = "ACCOUNT_TYPE"
-    schema = get_schema_from_file(file_path + table_name + ".sql")
-    print(schema)
-    save_sql_to_file(table_name, schema)
+    
+    file_path = r"D:\Documents\Timor Leste Project\sql_scripts\oracle\ddl\\"
+    for filename in os.listdir(file_path):
+        if filename.endswith(".sql"):
+            table_name = os.path.splitext(filename)[0]
+            schema = get_schema_from_file(os.path.join(file_path, filename))
+            print(f"{table_name}: {schema}")
+            save_sql_to_file(table_name, schema)
+    # table_name = "ACCOUNT_TYPE"
+    # schema = get_schema_from_file(file_path + table_name + ".sql")
+    # print(schema)
+    # save_sql_to_file(table_name, schema)
     # schemas = get_oracle_list_table_schema(jdbc_url, user, password, table_name_list, driver_path)
     # try:
     #     for table in schemas.keys():

@@ -12,6 +12,6 @@ SELECT
 FROM
     ACCESS_LOG
 WHERE
-    trunc(CREATED_DATE) >= TRUNC(SYSDATE - 1)
+    ID >= TRUNC(SYSDATE - 1)
             AND ID < TRUNC(SYSDATE)
         

@@ -353,7 +353,6 @@ IS
                AND c.to_acc_id = 28
                AND c.process_code IN ('023003', '023001');
 
-
         SELECT SUM (c.amount)
           INTO v_value_day
           FROM trans_accounting c
@@ -371,7 +370,6 @@ IS
                AND c.from_acc_id > 100
                AND c.to_acc_id = 28
                AND c.process_code IN ('023003', '023001');
-
 
         SELECT SUM (c.amount)
           INTO v_value_mon
@@ -554,12 +552,6 @@ IS
                AND to_acc_id = 5
                AND process_code = '010003';
 
-        insert_rpt (p_date,
-                    1200490,
-                    v_value_day,
-                    NULL,
-                    'DT Rut tien');
-
         -- 15. rut tien by month  (revenue from cashout by month)
         SELECT SUM (amount)
           INTO v_value_mon
@@ -690,20 +682,6 @@ IS
                     v_revenue_temp_mon - v_commission_temp_mon - v_value_cashin2_mon,
                     'DT tru commission rut tien/nap tien');
 
-
-        --19. vien thong tra truoc by day (fee topup prepaid by day)
-        -- minhdv: Modify
---        SELECT SUM (d.amount * 0.135) revenue_share
---          INTO v_value_day_dtdv
---          FROM trans_step d
---         WHERE     d.process_code IN ('571000',
---                                      '571001',
---                                      '573000',
---                                      '573001')
---               AND d.ERROR_CODE = '00000'
---               AND d.date_created >= p_from_date
---               AND d.date_created < p_to_date + 1;
-        
         SELECT   SUM (amount* 0.135) revenue_share into v_value_day_dtdv
               FROM   Trans_vpg
              WHERE       request_date >= p_from_date
@@ -711,18 +689,6 @@ IS
                      and error_code='1' and response_code=0
                   and (process_code in ('571000','571001') or (process_code in ('573000','573001') and vas_code is null));
 
-        -- 20. vien thong tra truoc by month (fee topup prepaid by month)
-        -- minhdv: Modify
---        SELECT SUM (d.amount * 0.135) revenue_share
---          INTO v_value_mon_dtdv
---          FROM trans_step d
---         WHERE     d.process_code IN ('571000',
---                                      '571001',
---                                      '573000',
---                                      '573001')
---               AND d.ERROR_CODE = '00000'
---               AND d.date_created >= TRUNC (p_from_date, 'mm')
---               AND d.date_created < p_to_date + 1;
         SELECT   SUM (amount* 0.135) revenue_share into v_value_mon_dtdv
               FROM   Trans_vpg
              WHERE       request_date >= TRUNC (p_from_date, 'mm')
@@ -736,31 +702,8 @@ IS
                     v_value_mon_dtdv,
                     'DT Vien thong tra truoc');
 
-
-        -- 21. vien thong tra sau by day (fee topup postpaid by day)
-        /*SELECT SUM (c.amount * 0.1) revenue_share
-          INTO v_value_day
-          FROM transaction c, trans_step d
-         WHERE     c.transaction_id = d.transaction_id
-               -- minhdv: Modify
-               AND c.transaction_state_id = 1
-               AND c.date_created >= p_from_date
-               AND c.date_created < p_to_date + 1
-               AND d.date_created >= p_from_date
-               AND d.date_created < p_to_date + 1;*/
-
-        -- minhdv: Modify
-        /*
-        insert_rpt (p_date,
-                    1200011,
-                    v_value_day,
-                    NULL,
-                    'DT Vien thong tra sau');
-        */
-
         -- Doanh thu DV Vien thong theo ngay
         SELECT sum(commission) revenue_share,
---               SUM (d.amount * 0.05) revenue_share,
                SUM (d.amount) total_amount
           INTO v_value_day, v_amount_day
           FROM trans_step d
@@ -855,12 +798,6 @@ IS
                                       '573000',
                                       '573001');
 
-        /*insert_rpt (p_date,
-                    1200104,
-                    v_amount_day,
-                    v_amount_mon,
-                    'GT Vien thong');*/
-
         insert_rpt (p_date,
                     1200133,
                     v_quantity_day,
@@ -887,16 +824,6 @@ IS
                AND from_acc_id = 13
                AND to_acc_id > 100;
 
---        SELECT SUM (d.fee - d.commission) revenue
---          INTO v_revenue_day
---          FROM trans_step d
---         WHERE     date_created >= p_from_date
---               AND date_created < p_to_date + 1
---               AND (   (process_code = '579001' AND trans_step_state_id = 10)
---                    OR (process_code = '579003' AND trans_step_state_id = 1))
---               AND ERROR_CODE = '00000';
-               
-
         -- 26. thu ho : thanh toan dich vu by month (fee pay on behalf by month)
         SELECT SUM (amount)
           INTO v_value_mon
@@ -914,16 +841,6 @@ IS
                AND process_code IN ('579003')
                AND from_acc_id = 13
                AND to_acc_id > 100;
-
---        SELECT SUM (d.fee - d.commission) revenue
---          INTO v_revenue_mon
---          FROM trans_step d
---         WHERE     date_created >= TRUNC (p_from_date, 'mm')
---               AND date_created < p_to_date + 1
---               AND (   (process_code = '579001' AND trans_step_state_id = 10)
---                    OR (process_code = '579003' AND trans_step_state_id = 1))
---               AND ERROR_CODE = '00000';
-
 
         insert_rpt (p_date,
                     1200113,
@@ -1026,72 +943,6 @@ IS
                     v_quantity_mon,
                     'KL DV Ban ho - Ban ho hang hoa, dich vu, xo so');
 
-        /*SELECT SUM (d.amount) total_amount
-          INTO v_value_day
-          FROM trans_step d
-         WHERE     d.date_created >= p_from_date
-               AND d.date_created < p_to_date + 1
-               AND d.process_code IN ('610006')
-               AND d.trans_step_state_id = 1;
-
-        SELECT SUM (d.amount) total_amount
-          INTO v_amount_mon
-          FROM trans_step d
-         WHERE     d.date_created >= TRUNC (p_from_date, 'mm')
-               AND d.date_created < p_to_date + 1
-               AND d.process_code IN ('610006')
-               AND d.trans_step_state_id = 1;*/
-
-        -- Phi duy tri TK
---        SELECT LAST_DAY (TO_DATE ('2022-02-15', 'yyyy-MM-dd'))
---          INTO v_last_date
---          FROM DUAL;
---
---        SELECT p_from_date INTO v_current_date FROM DUAL;
-
---        IF v_last_date = v_current_date
---        THEN
---            
---            
---        ELSE
---            insert_rpt (p_date,
---                        1200027,
---                        0,
---                        0,
---                        'Doanh thu khac - Phi duy tri TK');
---            
---        END IF;
-
-        -- 27. chi ho : chi luong by day (fee pay salary on behalf by  day)
-        /*SELECT SUM (c.fee) trans_fee,
-               SUM (c.amount) trans_amount,
-               COUNT (1) trans_quantity
-          INTO v_value_day, v_amount_day, v_quantity_day
-          FROM transaction c, trans_step d
-         WHERE     c.transaction_id = d.transaction_id
-               AND c.date_created >= p_from_date
-               AND c.date_created < p_to_date + 1
-               AND d.date_created >= p_from_date
-               AND d.date_created < p_to_date + 1
-               AND d.process_code IN ('035101', '035105', '039004')
-               -- AND trans_fee > 0
-               AND d.ERROR_CODE = '00000';
-
-        -- 28.  chi ho : chi luong by month (fee pay salary on behalf by month)
-        SELECT SUM (c.fee) trans_fee,
-               SUM (c.amount) trans_amount,
-               COUNT (1) trans_quantity
-          INTO v_value_mon, v_amount_mon, v_quantity_mon
-          FROM transaction c, trans_step d
-         WHERE     c.transaction_id = d.transaction_id
-               AND c.date_created >= TRUNC (p_from_date, 'mm')
-               AND c.date_created < p_to_date + 1
-               AND d.date_created >= TRUNC (p_from_date, 'mm')
-               AND d.date_created < p_to_date + 1
-               AND d.process_code IN ('035101', '035105', '039004')
-               -- AND trans_fee > 0
-               AND d.ERROR_CODE = '00000';*/
-
         -- minhdv: Modify - Manual upload
         IF TRUNC(SYSDATE, 'MM') = trunc(sysdate) then
             insert_rpt (p_date,
@@ -1156,16 +1007,7 @@ IS
                     0,
                     NULL);
         END IF;
-
-        
-
---        insert_rpt (p_date,
---                    1200145,
---                    v_quantity_day,
---                    v_quantity_mon,
---                    'KL Chi ho - Chi luong');
-        
-                    
+             
         --     Tong so du vi he thong
         SELECT SUM (balance) sum_of_money
           INTO v_value_day

@@ -1,73 +1,81 @@
--- Set Hive execution parameters
-set hive.exec.dynamic.partition.mode = nonstrict;
-set hive.exec.dynamic.partition = true;
-set hive.exec.parallel = true;
-set mapred.reduce.tasks = 10;
 
--- Drop the raw table if it exists
+set hive.exec.dynamic.partition.mode=nonstrict;
+set hive.exec.dynamic.partition=true;
+set hive.exec.parallel=true;
+set mapred.reduce.tasks=10;
+        
+
 DROP TABLE IF EXISTS rd_ewallet_account_right;
+        
 
--- Create the raw external table
-CREATE EXTERNAL TABLE IF NOT EXISTS rd_ewallet_account_right (
-    ACCOUNT_RIGHT_ID      STRING,
-    ACCOUNT_ID            STRING,
-    ACCOUNT_STATE_ID      STRING,
-    PROCESS_CODE          STRING,
-    TRANSACTION_TYPE_ID   STRING,
-    ACCOUNT_TYPE_ID       STRING,
-    CREATED_BY            STRING,
-    MODIFIED_BY           STRING,
-    CREATED_TIME          STRING,
-    LAST_MODIFIED         STRING,
-    STATUS                STRING,
-    EFFECT_TYPE           STRING,
-    PARTNER_CODE          STRING,
-    SERVICE_CODE          STRING,
-    CDR_FILE_NAME         STRING,
-    DOWNLOAD_TIME         STRING
+create external table if not exists rd_ewallet_account_right (
+    ACCOUNT_RIGHT_ID String,
+  ACCOUNT_ID String,
+  ACCOUNT_STATE_ID String,
+  PROCESS_CODE String,
+  TRANSACTION_TYPE_ID String,
+  ACCOUNT_TYPE_ID String,
+  CREATED_BY String,
+  MODIFIED_BY String,
+  CREATED_TIME String,
+  LAST_MODIFIED String,
+  STATUS String,
+  EFFECT_TYPE String,
+  PARTNER_CODE String,
+  SERVICE_CODE String
+  ,
+    CDR_FILE_NAME string,
+    DOWNLOAD_TIME string
 )
-ROW FORMAT DELIMITED 
-    FIELDS TERMINATED BY '|'
-LOCATION '${HDFS_DIR_RAW_ZONE_FINTECH}/vtl_ewallet_account_right/${YYYYMMDD}';
+ROW FORMAT DELIMITED FIELDS TERMINATED BY '|'
+LOCATION '${HDFS_DIR_RAW_ZONE_FINTECH}/vtl_ewallet_account_right/${YYYYMMDD}'
+TBLPROPERTIES (
+    'EXTERNAL'='FALSE'
+) 
+;
+    
 
--- Create the processed external table
 CREATE EXTERNAL TABLE IF NOT EXISTS f_ewallet_account_right (
-    ACCOUNT_RIGHT_ID      STRING,
-    ACCOUNT_ID            STRING,
-    ACCOUNT_STATE_ID      STRING,
-    PROCESS_CODE          STRING,
-    TRANSACTION_TYPE_ID   STRING,
-    ACCOUNT_TYPE_ID       STRING,
-    CREATED_BY            STRING,
-    MODIFIED_BY           STRING,
-    CREATED_TIME          STRING,
-    LAST_MODIFIED         STRING,
-    STATUS                STRING,
-    EFFECT_TYPE           STRING,
-    PARTNER_CODE          STRING,
-    SERVICE_CODE          STRING
-)
-STORED AS PARQUET
+    ACCOUNT_RIGHT_ID String,
+  ACCOUNT_ID String,
+  ACCOUNT_STATE_ID String,
+  PROCESS_CODE String,
+  TRANSACTION_TYPE_ID String,
+  ACCOUNT_TYPE_ID String,
+  CREATED_BY String,
+  MODIFIED_BY String,
+  CREATED_TIME String,
+  LAST_MODIFIED String,
+  STATUS String,
+  EFFECT_TYPE String,
+  PARTNER_CODE String,
+  SERVICE_CODE String
+  
+)       
+PARTITIONED BY (partition string)
+STORED AS parquet
 LOCATION '${HDFS_DIR_WORK_ZONE_FINTECH}/f_ewallet_account_right'
 TBLPROPERTIES (
     'parquet.compression' = 'SNAPPY'
 );
+    
 
--- Insert data into the processed table with partitioning
-INSERT OVERWRITE TABLE f_ewallet_account_right 
-SELECT
-    ACCOUNT_RIGHT_ID,
-    ACCOUNT_ID,
-    ACCOUNT_STATE_ID,
-    PROCESS_CODE,
-    TRANSACTION_TYPE_ID,
-    ACCOUNT_TYPE_ID,
-    CREATED_BY,
-    MODIFIED_BY,
-    from_unixtime(cast(CREATED_TIME / 1000 AS BIGINT), 'yyyy-MM-dd HH:mm:ss') AS CREATED_TIME,
-    from_unixtime(cast(LAST_MODIFIED / 1000 AS BIGINT), 'yyyy-MM-dd HH:mm:ss') AS LAST_MODIFIED,
-    STATUS,
-    EFFECT_TYPE,
-    PARTNER_CODE,
-    SERVICE_CODE
+INSERT OVERWRITE TABLE f_ewallet_account_right PARTITION (partition)            
+SELECT 
+    NULLIF(ACCOUNT_RIGHT_ID, '') as ACCOUNT_RIGHT_ID,
+  NULLIF(ACCOUNT_ID, '') as ACCOUNT_ID,
+  NULLIF(ACCOUNT_STATE_ID, '') as ACCOUNT_STATE_ID,
+  NULLIF(PROCESS_CODE, '') as PROCESS_CODE,
+  NULLIF(TRANSACTION_TYPE_ID, '') as TRANSACTION_TYPE_ID,
+  NULLIF(ACCOUNT_TYPE_ID, '') as ACCOUNT_TYPE_ID,
+  NULLIF(CREATED_BY, '') as CREATED_BY,
+  NULLIF(MODIFIED_BY, '') as MODIFIED_BY,
+  from_unixtime(cast(CREATED_TIME/1000 as bigint),'yyyy-MM-dd HH:mm:ss') as CREATED_TIME,
+  from_unixtime(cast(LAST_MODIFIED/1000 as bigint),'yyyy-MM-dd HH:mm:ss') as LAST_MODIFIED,
+  NULLIF(STATUS, '') as STATUS,
+  NULLIF(EFFECT_TYPE, '') as EFFECT_TYPE,
+  NULLIF(PARTNER_CODE, '') as PARTNER_CODE,
+  NULLIF(SERVICE_CODE, '') as SERVICE_CODE,
+    from_unixtime(cast(SUM_DATE/1000 as bigint),'yyyyMMdd') partition
 FROM rd_ewallet_account_right;
+    
